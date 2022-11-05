@@ -91,8 +91,8 @@ async def on_message(message):
 
 
 
-#client.run(key)
-client.run("MTAzODUxNTg4MDY1MDM1ODgxNA.Go8sWi.mHh1Jj8Xyti11P4f0yIF_CrzE_yhfc-t3vynHg")
+client.run(key)
+#client.run("MTAzODUxNTg4MDY1MDM1ODgxNA.Go8sWi.mHh1Jj8Xyti11P4f0yIF_CrzE_yhfc-t3vynHg")
 
 
 #Bot command to take in an arg
