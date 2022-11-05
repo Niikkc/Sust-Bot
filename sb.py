@@ -9,35 +9,37 @@ intents.message_content = True
 bot = commands.Bot(intents=discord.Intents.default(),command_prefix='$')
 
 client = discord.Client(intents=intents)
-keyFile = open(".\Sustainability-Bot\key.txt","r")
+keyFile = open(".\Sust-Bot\key.txt","r", encoding='utf-8')
 key = keyFile.read()
 print(f"KeyFile read : {key}")
 keyFile.close()
 companies = {}
 
-companyList = {}
+
 
 @client.event
 async def on_ready():
-
-        
+    
     print(f'We have logged in as {client.user}')
     await client.change_presence(activity=discord.Game(name='with trees'))
 
-    file = open("companyList.txt", "r")
-    s = file.read()
-    for i in range(40):
-    # while s != None:
+    file = open(".\Sust-Bot\companyList.txt", "r", encoding='utf-8')
+    s = file.readline()
+
+    print(s)
+
+    #for i in range(40):
+    while s != "":
         print("asdlfjasldf")
         spaceIndex = s.find(" ")
         companyName = s[:spaceIndex]
         s = s[spaceIndex:]
         spaceIndex = s.find(" ")
-        companyRating = s[:spaceIndex]
+        companyRating = s[:spaceIndex + 2]
         s = s[spaceIndex:]
         startIndex = s.find("(")
         endIndex = s.find(")")
-        comment = s[startIndex : endIndex]
+        comment = s[startIndex + 1: endIndex]
         print(f"Company : {companyName}, Company Rating : {companyRating}, First Comment : {comment}")
         print()
 
@@ -46,7 +48,7 @@ async def on_ready():
 
 
 
-        s = file.read()
+        s = file.readline()
     file.close()
         
 

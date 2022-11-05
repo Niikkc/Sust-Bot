@@ -1,39 +1,20 @@
 Shein 0 (Known to use child labor and dumps millions of pounds of unwanted clothing in the global south)
-
 Volkswagen 2 (Admitted to cheating emissions tests by fitting various vehicles with a “defect” device)
-
 Nestle 2 (Known to be one of the top worldwide plastic pollutants)
-
 Starbucks 4 (The Starbucks "strawless lid" has known to actually use more platic than their original lid and straw combination)
-
 Ikea 3 (Was involved in a illegal logging scandal in Ukraine)
-
 Amazon 0 (Consistently encourages overconsumption and advocates faster shipping)
-
 Netflix 3 (Netflix has an unsustainable business model as depicted through their tendency to begin big-budget projects only to end them after a single season, wasting resources)
-
 Samsung 5 (Despite providing its public greenhouse gas emssions/energy footprint, Samsung has failed to publish its list of suppliers)
-
 H&M 1 (Besides grossly underpaying its workers, H&M falsely claims to be sustainable by starting recycling programs while others point out that it would be greener if their clothes would last for years instead of quickly falling apart)
-
-Victoria's Secret 3 (VS has yet to eliminate toxic waste from its supply chain)
-
+Victoria's_Secret 3 (VS has yet to eliminate toxic waste from its supply chain)
 Disney 7 (Continues to practice sustainability by purchasing solar facilities and reducing their net emissions by 47%)
-
-Burt's Bees 9 (The skincare brand has not sent waste to the landfill since 2011, and prioritizes responsible sourcing and carbon neutruality)
-
+Burt's_Bees 9 (The skincare brand has not sent waste to the landfill since 2011, and prioritizes responsible sourcing and carbon neutruality)
 Target 7 (Continuously sets new goals and makes commitments to invest in green chemistry innovations)
-
 Patagonia 8 (Best for fair trade outdoor clothing, recycled materials, secondhand shop and organic cotton)
-
-Package Free shop 10 (Includes an extensive amount of products to help reduce single waste plastic from beatuy to skin care to day to day life)
-
-Misfits Market 10 (Reduces food waste by redirecting surplus food and "ugly" produce to keep them out of landfills)
-
+Package_Free_Shop 10 (Includes an extensive amount of products to help reduce single waste plastic from beatuy to skin care to day to day life)
+Misfits_Market 10 (Reduces food waste by redirecting surplus food and "ugly" produce to keep them out of landfills)
 Gucci 7 (Gucci has been mindful of their environmental impact with fabrics made of consumer waste, recycled plastic, discarded carpets, and ghost fishnets)
-
-Vivienne Westwood 6 (Promotes cruelty free products and organic cotton, recycled polyester/nylon, and responsibly sourced viscose)
-
-Peabody Energy 0 (Being the largest private-sector coal company in the world, they contribute the most emissions and greenhouse gases)
-
+Vivienne_Westwood 6 (Promotes cruelty free products and organic cotton, recycled polyester/nylon, and responsibly sourced viscose)
+Peabody_Energy 0 (Being the largest private-sector coal company in the world, they contribute the most emissions and greenhouse gases)
 Huggies 0 (Created a line of diapers that simply slapped a small piece of organic cotton on the outside)
