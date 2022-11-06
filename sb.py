@@ -53,12 +53,13 @@ async def on_ready():
 # Grad User Input and then Look it up against the company Name
 @bot.command()
 # @client.command()
-async def company_check(ctx, *, arg):
-    print(companies)
+async def Company_Check(ctx, *, arg):
+    # print(companies)
     companyName = arg
     companyName.replace(" ", "_")
     print(companyName)
     companyRating = companies.get(companyName)[0]
+    print(companyRating)
     colorCode = 0x00ff00
     if int(companyRating) < 7:
         colorCode = 0xFEFF7D
@@ -69,12 +70,20 @@ async def company_check(ctx, *, arg):
 
         #colorCode = 0xFF0000
 
-        embedVar = discord.Embed(
-            title=companyName, description="Environmental Rating : " + str(companyRating), color=colorCode)
-        embedVar.add_field(name="Fun Fact", value=str(
-            (companies.get(companyName)[1])[0]), inline=False)
-        await ctx.send(embed=embedVar)
-        print("tests")
+    embedVar = discord.Embed(
+        title=companyName, description="Environmental Rating : " + str(companyRating), color=colorCode)
+    embedVar.add_field(name="Fun Fact", value=str(
+        (companies.get(companyName)[1])[0]), inline=False)
+    await ctx.send(embed=embedVar)
+
+
+@bot.command()
+async def tip(ctx):
+    tipFile = open("sustainabilityTips.txt", "r", encoding='utf-8')
+    n = random.randint(0, 9)
+    content = tipFile.readlines()
+    await ctx.send(content[n])
+    tipFile.close()
 
 
 @client.event
