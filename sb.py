@@ -9,7 +9,7 @@ intents.message_content = True
 bot = commands.Bot(intents=discord.Intents.default(),command_prefix='$')
 
 client = discord.Client(intents=intents)
-keyFile = open(".\Sust-Bot\key.txt","r", encoding='utf-8')
+keyFile = open("key.txt","r", encoding='utf-8')
 key = keyFile.read()
 print(f"KeyFile read : {key}")
 keyFile.close()
@@ -23,32 +23,29 @@ async def on_ready():
     print(f'We have logged in as {client.user}')
     await client.change_presence(activity=discord.Game(name='with trees'))
 
-    file = open(".\Sust-Bot\companyList.txt", "r", encoding='utf-8')
+    file = open("companyList.txt", "r", encoding='utf-8')
     s = file.readline()
 
-    print(s)
+    #print(s)
 
-    #for i in range(40):
+
     while s != "":
-        print("asdlfjasldf")
+        #print("asdlfjasldf")
         spaceIndex = s.find(" ")
         companyName = s[:spaceIndex]
         s = s[spaceIndex:]
         spaceIndex = s.find(" ")
         companyRating = s[:spaceIndex + 2]
         s = s[spaceIndex:]
-        startIndex = s.find("(")
-        endIndex = s.find(")")
-        comment = s[startIndex + 1: endIndex]
-        print(f"Company : {companyName}, Company Rating : {companyRating}, First Comment : {comment}")
-        print()
-
-        
-
-
-
-
+        companies.update({companyName : [companyRating, []]})
+        while s.find("(") != -1:
+            startIndex = s.find("(")
+            endIndex = s.find(")")
+            ((companies.get(companyName))[1]).append(s[startIndex + 1: endIndex])
+            s = s[endIndex:]
         s = file.readline()
+
+    #print(companies)  
     file.close()
         
 
@@ -62,6 +59,13 @@ async def on_message(message):
     #companyList = {str : [start,end]}
     if message.content.startswith('Sustainability Bot where at?'):
         await message.channel.send('Hello!')
+
+    if message.content.startswith('test'):
+        companyName = "Shein" #TODO input
+        embedVar = discord.Embed(title= companyName, description="Environmental Rating : " + str(companies.get(companyName)[0]), color=0x00ff00)
+        embedVar.add_field(name="Fun Fact", value=str((companies.get(companyName)[1])[0]), inline=False)
+        #embedVar.add_field(name="Field2", value="hi2", inline=False)
+        await message.channel.send(embed=embedVar)
 
 
     #Check how good a specific company is
