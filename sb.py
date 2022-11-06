@@ -72,9 +72,6 @@ async def on_message(message):
             colorCode = 0xFF8000
         if int(companyRating) < 2:
             colorCode = 0xFF0000
-        
-        
-        #colorCode = 0xFF0000
 
         embedVar = discord.Embed(title= companyName, description="Environmental Rating : " + str(companyRating), color=colorCode)
         embedVar.add_field(name="Fun Fact", value=str((companies.get(companyName)[1])[0]), inline=False)
