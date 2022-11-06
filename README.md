@@ -1,19 +1,14 @@
 # Sustainability-Bot
-The repository of the famed Sustainability Bot
-/n
+The purpose of this bot is to help you become more environmentally-conscious and think greener!
+
 Functionality:
 
 **Sustainability Tips!**
-* Every week, a random piece of advice on how to be more enviroementally-conscious will be sent to you!
-
+* Every week, a random piece of advice on how to be more enviromentally-conscious will be sent to you!
 * To immediately recieve a tip, type $tip
 
-Upcoming Features: 
+**Company Ratings!**
+* Find a company's sustainability rating by entering $Company_Check [Company] 
+* The rating (0-10) will also be accompanied by a piece of trivia about the company
 
-* Link VS code to this github 
-* Create database of companies and their sustainability rating and facts
-* Add function to scrape bank statement.
-* Random weekly/daily/ whenever you want sustainability tips/facts/something
-* Add functionality to be able to message the bot about how good a company is
-* Make it look good
-* Make better name
+![Alt text](https://www.agilus.ai/wp-content/uploads/2022/05/4-Practical-Environmental-Sustainability-Activities.jpg)
