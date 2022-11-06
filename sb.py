@@ -59,6 +59,7 @@ async def company_check(ctx, *, arg):
     companyName.replace(" ", "_")
     print(companyName)
     companyRating = companies.get(companyName)[0]
+    print("test3" + str(companyRating))
     colorCode = 0x00ff00
     if int(companyRating) < 7:
         colorCode = 0xFEFF7D
@@ -67,23 +68,21 @@ async def company_check(ctx, *, arg):
     if int(companyRating) < 2:
         colorCode = 0xFF0000
 
-        #colorCode = 0xFF0000
-
-        embedVar = discord.Embed(
-            title=companyName, description="Environmental Rating : " + str(companyRating), color=colorCode)
-        embedVar.add_field(name="Fun Fact", value=str(
-            (companies.get(companyName)[1])[0]), inline=False)
-        await ctx.send(embed=embedVar)
-        print("tests")
+    #colorCode = 0xFF0000
+    print("test2")
+    embedVar = discord.Embed(title=companyName, description="Environmental Rating : " + str(companyRating), color=colorCode)
+    embedVar.add_field(name="Fun Fact", value=str((companies.get(companyName)[1])[0]), inline=False)
+    await ctx.send(embed=embedVar)
+    print("tests")
 
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-    #companyList = {str : [start,end]}
-    if message.content.startswith('Sustainability Bot where at?'):
-        await message.channel.send('Hello!')
+# @client.event
+# async def on_message(message):
+#     if message.author == client.user:
+#         return
+#     #companyList = {str : [start,end]}
+#     if message.content.startswith('Sustainability Bot where at?'):
+#         await message.channel.send('Hello!')
 
     # if message.content.startswith('test'):
     #     #companyName = "Shein" #TODO input
