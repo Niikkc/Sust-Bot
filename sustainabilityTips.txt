@@ -7,13 +7,7 @@ Drive less, walk more
 Turn off your computer at night
 Use fluorescent bulbs
 Bring reusable shopping bags
-import random
-tipFile = open("sustainabilityTips.txt","a")
 
-n = random.randint(0, 9)
-tipFile.read([n])
-
-tipFile.close()
 
 
 

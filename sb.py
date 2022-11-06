@@ -1,5 +1,6 @@
 import discord
 import random
+import linecache
 
 from discord.ext import commands
 
@@ -61,10 +62,22 @@ async def on_message(message):
         await message.channel.send('Hello!')
 
     if message.content.startswith('test'):
-        companyName = "Shein" #TODO input
-        embedVar = discord.Embed(title= companyName, description="Environmental Rating : " + str(companies.get(companyName)[0]), color=0x00ff00)
+        #companyName = "Shein" #TODO input
+        companyName = input()
+        companyRating = companies.get(companyName)[0]
+        colorCode = 0x00ff00
+        if int(companyRating) < 7:
+            colorCode = 0xFEFF7D
+        if int(companyRating) < 5:
+            colorCode = 0xFF8000
+        if int(companyRating) < 2:
+            colorCode = 0xFF0000
+        
+        
+        #colorCode = 0xFF0000
+
+        embedVar = discord.Embed(title= companyName, description="Environmental Rating : " + str(companyRating), color=colorCode)
         embedVar.add_field(name="Fun Fact", value=str((companies.get(companyName)[1])[0]), inline=False)
-        #embedVar.add_field(name="Field2", value="hi2", inline=False)
         await message.channel.send(embed=embedVar)
 
 
@@ -89,10 +102,11 @@ async def on_message(message):
 
     elif message.content.startswith('tip'):
         #await message.channel.send("test")
-        tipFile = open("sustainabilityTips.txt","a")
+        tipFile = open("sustainabilityTips.txt","r", encoding='utf-8')
         n = random.randint(0, 9)
-        await message.channel.send(n)
-        await message.channel.send(tipFile.read([n]))
+        content = tipFile.readlines()
+        #await message.channel.send(n)
+        await message.channel.send(content[n])
         tipFile.close()
 
 
